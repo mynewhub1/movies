@@ -1,18 +1,12 @@
-//opening the data base
-import { openDB } from 'idb';
-
-
-export const database = openDB('movieStore', 2, {
-  
-upgrade(db) {
-db.createObjectStore("MoviesToStore", { keyPath: "id" }, { autoIncrement: true }); 
-},
-});    
-
-
-
-
-
+import { openDB } from "idb";
+export const database = openDB("movieStore", 2, {
+  upgrade(db) {
+    db.createObjectStore("MoviesToStore", {
+      keyPath: "id",
+      autoIncrement: true,
+    });
+  },
+});
 
 //function
 // a function is const myfunc = () => {
@@ -22,4 +16,5 @@ db.createObjectStore("MoviesToStore", { keyPath: "id" }, { autoIncrement: true }
 // a method is myMethod() {
 // console.log("");
 
-//} 
+//}
+
