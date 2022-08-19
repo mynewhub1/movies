@@ -111,7 +111,7 @@ class Movies extends HTMLElement {
 window.customElements.define("movie-component", Movies);
 
 export async function getData(inputVal, plotLen) {
-  const apiKey = "f86cbe00";
+  const apiKey = "";
   const resp = await fetch(
     `https://www.omdbapi.com/?s=${inputVal}&plot=short&apikey=${apiKey}`
   );
